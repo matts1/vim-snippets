@@ -40,7 +40,7 @@ int main() {
 endsnippet
 
 snippet inc "include"
-#include <${1}>
+`!v ggO` #include <${1}>
 endsnippet
 
 snippet Inc "#include current file"
@@ -210,88 +210,81 @@ snippet c "const"
 const ${1}
 endsnippet
 
-
-## Types
-snippet map "std::map (map)"
-std::map<${1:key}, ${2:value}> map$0;
-endsnippet
-
-snippet vector "std::vector (v)"
-std::vector<${1:char}> v$0;
-endsnippet
-
-snippet tp "template <typename ..> (template)"
-template <typename ${1:_InputIter}>
+snippet tem "template <typename ..> (template)"
+template <typename ${1}>
 endsnippet
 
 snippet ret
 return ${0};
 endsnippet
 
-snippet array
-std::array<${1:T}, ${2:N}> ${3};
-endsnippet
-# std::vector
-snippet vector
-std::vector<${1:T}> ${2};
-endsnippet
-# std::deque
-snippet deque
-std::deque<${1:T}> ${2};
-endsnippet
-# std::forward_list
-snippet flist
-std::forward_list<${1:T}> ${2};
-endsnippet
-# std::list
-snippet list
-std::list<${1:T}> ${2};
-endsnippet
-# std::set
-snippet set
-std::set<${1:T}> ${2};
-endsnippet
-# std::map
-snippet map
-std::map<${1:Key}, ${2:T}> ${3};
-endsnippet
-# std::multiset
-snippet mset
-std::multiset<${1:T}> ${2};
-endsnippet
-# std::multimap
-snippet mmap
-std::multimap<${1:Key}, ${2:T}> ${3};
-endsnippet
-# std::unordered_set
-snippet uset
-std::unordered_set<${1:T}> ${2};
-endsnippet
-# std::unordered_map
-snippet umap
-std::unordered_map<${1:Key}, ${2:T}> ${3};
-endsnippet
-# std::unordered_multiset
-snippet umset
-std::unordered_multiset<${1:T}> ${2};
-endsnippet
-# std::unordered_multimap
-snippet ummap
-std::unordered_multimap<${1:Key}, ${2:T}> ${3};
-endsnippet
-# std::stack
-snippet stack
-std::stack<${1:T}> ${2};
-endsnippet
-# std::queue
-snippet queue
-std::queue<${1:T}> ${2};
-endsnippet
-# std::priority_queue
-snippet pqueue
-std::priority_queue<${1:T}> ${2};
+snippet arr "array" i
+std::array<${1:T}, ${2:N}> ${3}
 endsnippet
 
+snippet vec "vector" i
+std::vector<${1:T}> ${2}
+endsnippet
+
+snippet deq "deque" i
+std::deque<${1:T}> ${2}
+endsnippet
+
+snippet flist "forward_list" i
+std::forward_list<${1:T}> ${2}
+endsnippet
+
+snippet list "list" i
+std::list<${1:T}> ${2}
+endsnippet
+
+snippet set "set" i
+std::set<${1:T}> ${2}
+endsnippet
+
+snippet map "map" i
+std::map<${1:Key}, ${2:T}> ${3}
+endsnippet
+
+snippet mset "multiset" i
+std::multiset<${1:T}> ${2}
+endsnippet
+
+snippet mmap "multimap" i
+std::multimap<${1:Key}, ${2:T}> ${3}
+endsnippet
+
+snippet uset "unordered_set" i
+std::unordered_set<${1:T}> ${2}
+endsnippet
+
+snippet umap "unordered map" i
+std::unordered_map<${1:Key}, ${2:T}> ${3}
+endsnippet
+
+snippet umset "unordered multiset" i
+std::unordered_multiset<${1:T}> ${2}
+endsnippet
+
+snippet ummap "unordered multimap" i
+std::unordered_multimap<${1:Key}, ${2:T}> ${3}
+endsnippet
+
+snippet stack "stack" i
+std::stack<${1:T}> ${2}
+endsnippet
+
+snippet queue "queue" i
+std::queue<${1:T}> ${2}
+endsnippet
+
+snippet pq "priority queue" i
+std::priority_queue<${1:T}> ${2}
+endsnippet
+
+snippet str "string" i
+std::string
+endsnippet
 
 ## Input/Output
 # std::cout
