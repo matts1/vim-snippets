@@ -1,3 +1,5 @@
+priority -50
+
 ## if statements
 snippet if "if" b
 if ($1) {
@@ -27,26 +29,20 @@ endsnippet
 
 
 ## loops
-snippet while "while" b
+snippet wh "while" b
 while ($1) {
   ${0:${VISUAL}}
 }
 endsnippet
 
-snippet forc "const range for loop (for)" b
-for (const auto& ${1:i} : ${2:container}) {
-  ${0:${VISUAL}}
-}
-endsnippet
-
 snippet for "range for loop" b
-for (auto& ${1:i} : ${2:container}) {
+for ($1 ${2:i} : ${3:container}) {
   ${0:${VISUAL}}
 }
 endsnippet
 
 snippet fori "for count to n loop" b
-for (auto ${1:i} = 0; $1 < ${2:count}; ${5:++$1}) {
+for (int ${1:i} = 0; $1 < ${2:count}; ${5:++$1}) {
   ${0:${VISUAL}}
 }
 endsnippet
@@ -57,9 +53,41 @@ for (${1}; ${2}; ${3}) {
 }
 endsnippet
 
-snippet try
+# try catch
+
+snippet try "try/catch" b
 try {
+  $1${VISUAL}
+} catch(${2:Exception} ${3:e}){
+  ${4:e.printStackTrace();}
+}
+endsnippet
+
+snippet ca "catch" b
+catch (${1:Exception} ${2:e}) {
   ${0:${VISUAL}}
-} catch(${1}) {
+}
+endsnippet
+
+# switch
+snippet br "break"
+break;
+
+endsnippet
+
+snippet cs "case" b
+case $1:
+  $2
+${0:${VISUAL}}
+endsnippet
+
+snippet de "default" b
+default:
+  ${0:${VISUAL}}
+endsnippet
+
+snippet sw "switch" b
+switch ($1) {
+  case $2: ${0:${VISUAL}}
 }
 endsnippet

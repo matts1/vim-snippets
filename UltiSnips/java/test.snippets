@@ -1,0 +1,15 @@
+snippet as "assert" b
+assertThat(${1:target}).$2;
+endsnippet
+
+snippet at "assert true" b
+assertThat(${1:actual}).isTrue();
+endsnippet
+
+snippet af "assert false" b
+assertThat(${1:actual}).isFalse();
+endsnippet
+
+snippet ae "assert equals" b
+assertThat(${1:expected}).isEqualTo(${2:actual});
+endsnippet
